@@ -87,6 +87,8 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   initialise_monitor_handles();
+  static uint32_t myNum = 0;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -94,8 +96,17 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	printf("test \n");
-	HAL_Delay(2000);
+	  printf("number : %ld \n",myNum++);
+	  HAL_Delay(500);
+
+	  //test condition
+	  if(myNum > 10){
+		  printf("end of test \n");
+		  break;
+	  }
+
+
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
