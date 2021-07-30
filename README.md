@@ -57,3 +57,35 @@ monitor arm semihosting enable
 <p align="center">
 <img src="samples/8.png"  />
 </p>
+
+# Example & Result
+```c
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  /* USER CODE BEGIN 2 */
+  initialise_monitor_handles();
+  static uint32_t myNum = 0;
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+      printf("number : %ld \n",myNum++);
+      HAL_Delay(500);
+
+      //test condition
+      if(myNum > 10){
+          printf("end of test \n");
+          break;
+      }
+    /* USER CODE BEGIN 3 */
+  }
+```
+### Result 
+
+<p align="center">
+<img src="samples/9.png"  />
+</p>
