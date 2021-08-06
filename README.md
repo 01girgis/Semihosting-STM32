@@ -2,6 +2,9 @@
 
 
 ## #1 : In Project Properties, select C/C++ Build, then Settings , then Add to Miscellaneous 
+
+NOTE: Do not Forget to enable Serial Debug in StmCube
+
 ```
 -specs=rdimon.specs -lc -lrdimon
 ```
